@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1649609732417-48b046cbb3a7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGthbGklMjBsaW51eHxlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: filter .4s;
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 60px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+}
+
+.btn {
+    background-color: green;
+    color: aliceblue;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: filter .4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(.7);
+}
+
+.main-container.active {
+    filter: blur(5px) brightness(.7);
+}
+
+.popup-container {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8a2FsaSUyMGxpbnV4fGVufDB8fDB8fHww");
+    background-size: cover;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition: all .4s;
+}
+
+h4 {
+    color: cyan;
+    letter-spacing: 3px;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+label {
+    color: cyan;
+}
+
+.input {
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.input::placeholder {
+    color: lightgray;
+}
+
+.join-btn {
+    padding: 10px;
+    font-size: 20px;
+    background-color: green;
+    color: aliceblue;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: filter .4s;
+}
+
+.join-btn:hover {
+    filter: brightness(.7);
+}
+
+.close-icon {
+    position: absolute;
+    right: 20px;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    color: orangered;
+}
+
+.popup-container.active {
+    visibility: hidden;
+    top: 10%;
+    opacity: 0;
+}
